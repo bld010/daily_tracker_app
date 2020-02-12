@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Daily',
+      title: 'Daily?',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
-      home: MyHomePage(title: 'Daily'),
+      home: MyHomePage(title: 'Daily!'),
     );
   }
 }
@@ -45,6 +45,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String _note = "hi";
 
   void _incrementCounter() {
     setState(() {
@@ -98,6 +99,8 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Text('$_note'),
+            TextField()
           ],
         ),
       ),
